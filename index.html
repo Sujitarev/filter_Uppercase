@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	
+	<script src="js/angular.js">
+        /*
+         Make all the values in the scope to be CAPITAL using uppercase Filters
+         */
+	</script>
+	<title>TO UPPERCASE </title>
+
+	<script type="text/javascript">
+	
+		var myApp = angular.module('myApp', []);
+
+		myApp.controller('myController', function ($scope) {
+			$scope.FirstName = 'Sameer',
+			$scope.LastName = 'Pal'
+		});
+
+		
+	</script>
+
+
+</head>
+
+<body>
+
+<center>
+
+		<div ng-controller="myController">
+			Name without filter : {{FirstName }} {{LastName }} <br/> <br/>
+
+			Name in Upper Case : {{FirstName | uppercase}} {{LastName | uppercase}}
+		</div>
+				
+</center>
+
+
+</body>
+</html>
